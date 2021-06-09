@@ -1,23 +1,25 @@
-def function(s):
-    u=''
-    l=''
-    d=''
-    count=0
-    special=''
-    for i in s:
-        if i.isupper():
-            u+=i
-        elif i.islower():
-            l+=i
-        elif i.isdigit():
-            d+=i
-        elif i==' ':
-            count+=1
-        else:
-            special+=i
+def function(str):
+    upper = ''
+    lower = ''
+    digit = ''
+    count = 0
+    special = ''
 
-    result = special+l+' '+u+' '+d+' '+str(count)
-    return result
+    for i in range(len(str)):
+        if (str[i].isdigit()):
+            digit = digit+ str[i]
+        elif (str[i] >= 'A' and str[i] <= 'Z'):
+            upper += str[i]
+        elif (str[i] >= 'a' and str[i] <= 'z'):
+            lower += str[i]
+        elif (str[i]==" "):
+            count += 1
+        else:
+            special += str[i]
+
+    print(f'Output: {special} {lower} {upper} {digit} {count} ')
  
-print(function('131/265 is where I and Sam Live.'))
+if __name__ == "__main__":
+    str = "131/265 is where I and Sam Live."
+    function(str)
 
