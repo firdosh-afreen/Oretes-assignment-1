@@ -9,6 +9,5 @@ def timeconvert(str1):
             return str(int(str1[:2]) + 12) + str1[2:8]
 
 print (timeconvert("08:55:48PM"))
-if __name__== "__main__":
-      timeconvert(str1)
+
 
